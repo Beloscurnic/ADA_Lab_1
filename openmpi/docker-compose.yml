@@ -1,0 +1,17 @@
+version: '3.7'
+
+services:
+  lab1_openmpi:
+    stdin_open: true
+    tty: true
+    build:
+      context: .
+    volumes:
+        - .:/home/student/lab1/openmpi
+    ports:
+      - "22"
+    networks:
+      - main
+
+networks:
+  main:
